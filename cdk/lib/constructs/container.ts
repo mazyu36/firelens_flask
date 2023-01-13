@@ -29,7 +29,7 @@ export class Container extends Construct {
         image: ecs.ContainerImage.fromEcrRepository(flaskRepository, "latest"),
         logDriver: ecs.LogDrivers.firelens({}), // LogDriverでfirelensを指定
         containerPort: 5000
-      }
+      },
     });
 
     // ヘルスチェックの設定

@@ -96,8 +96,8 @@ export class LogInfra extends Construct {
           prefix: 'ecs-logs/',
           roleArn: deliveryStreamRole.roleArn,
           bufferingHints: {
-            intervalInSeconds: 300,
-            sizeInMBs: 5
+            intervalInSeconds: 60,
+            sizeInMBs: 1
           },
           compressionFormat: 'GZIP',
           errorOutputPrefix: "errorOutput",
